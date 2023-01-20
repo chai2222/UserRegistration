@@ -65,8 +65,7 @@ namespace User
             Console.WriteLine("Please Enter Email :");
             string data = Console.ReadLine();
 
-            //ssmcmethre3080@gmail.com
-            string pattern = "^[a-z0-9]*@[a-z]{2,}.[a-z]{2,}$";
+            string pattern = "^[a-zA-z]{3,}([.][a-zA-Z]{3,})[@][a-z]{2}[.][a-z]{2}([.][a-z]{2})$";
 
             //creating object of the Regex superclass
 
@@ -82,6 +81,33 @@ namespace User
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Email is Invalid");
+                Console.ResetColor();
+            }
+        }
+
+        //UC4
+
+        public void ValidPhNumber()
+        {
+            Console.WriteLine("Please Enter Phone Number :");
+            string data = Console.ReadLine();
+
+            string pattern = "^[0-9]{2}[ ][6-9]{1}[0-9]{9}$";
+
+            //creating object of the Regex superclass
+
+            Regex regobj = new Regex(pattern);
+
+            if (regobj.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Phone Number is Valid");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Phone Number is Invalid");
                 Console.ResetColor();
             }
         }

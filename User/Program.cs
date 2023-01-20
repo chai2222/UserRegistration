@@ -10,7 +10,8 @@
             Console.WriteLine("Select Options Please :\n" +
                 "1)Enter First Name\n" +
                 "2)Enter Last Name\n" +
-                "3)Enter E-Mail Address\n");
+                "3)Enter E-Mail Address\n" +
+                "4)Enter Phone Number\n");
 
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -32,8 +33,15 @@
 
                 case 3:
                     UserRegistration user2 = new UserRegistration();
-                    Console.WriteLine(":::::::::::::::::::::::::::::::");
+                    Console.WriteLine(":::::::::::::::::::::::::::::;::");
                     user2.ValidEmail();
+                    break;
+
+                case 4:
+
+                    UserRegistration user3 = new UserRegistration();
+                    Console.WriteLine(":::::::::::::::::::::::::::::;::");
+                    user3.ValidPhNumber();
                     break;
 
 
