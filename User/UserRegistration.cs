@@ -6,14 +6,12 @@ namespace User
 {
     public class UserRegistration
     {
-        //UC6
-
-        public void ValidPasswordRule2()
+        public void ValidPasswordRule3()
         {
-            Console.WriteLine("Please Enter Password Rule 2 :");
+            Console.WriteLine("Please Enter Password Rule 3 :");
             string data = Console.ReadLine();
 
-            string pattern = "^(?=.*[A-Z])[a-zA-Z]{4,}$";
+            string pattern = "^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$";
 
             //creating object of the Regex superclass
 
@@ -22,13 +20,13 @@ namespace User
             if (regobj.IsMatch(data))
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Password Rule 2 is Valid");
+                Console.WriteLine("Password Rule 3 is Valid");
                 Console.ResetColor();
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Password Rule 2 Invalid");
+                Console.WriteLine("Password Rule 3 Invalid");
                 Console.ResetColor();
             }
         }
