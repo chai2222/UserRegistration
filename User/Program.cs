@@ -8,7 +8,7 @@
             Console.WriteLine("Welcome to REGEX User Registration Problem");
         Start:
             Console.WriteLine("Select Options Please :\n" +
-                 "1)Enter Password Rule No. 1\n");
+                 "1)Enter Password Rule No. 2\n");
 
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -16,10 +16,11 @@
             {
                 case 1:
 
-                    UserRegistration user4 = new UserRegistration();
+                    UserRegistration user5 = new UserRegistration();
                     Console.WriteLine(":::::::::::::::::::::::::::::;::");
-                    user4.ValidPasswordRule1();
+                    user5.ValidPasswordRule2();
                     break;
+
 
 
                 default:

@@ -4,14 +4,16 @@ using System.Text.RegularExpressions;
 
 namespace User
 {
-    public  class UserRegistration
+    public class UserRegistration
     {
-        public void ValidPasswordRule1()
+        //UC6
+
+        public void ValidPasswordRule2()
         {
-            Console.WriteLine("Please Enter Password Rule 1 :");
+            Console.WriteLine("Please Enter Password Rule 2 :");
             string data = Console.ReadLine();
 
-            string pattern = "^[a-zA-Z]{8,}$";
+            string pattern = "^(?=.*[A-Z])[a-zA-Z]{4,}$";
 
             //creating object of the Regex superclass
 
@@ -20,13 +22,13 @@ namespace User
             if (regobj.IsMatch(data))
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Password Rule 1 is Valid");
+                Console.WriteLine("Password Rule 2 is Valid");
                 Console.ResetColor();
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Password Rule 1 Invalid");
+                Console.WriteLine("Password Rule 2 Invalid");
                 Console.ResetColor();
             }
         }
