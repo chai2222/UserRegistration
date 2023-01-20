@@ -4,10 +4,11 @@
     {
         public static void Main(string[] args)
         {
+
             Console.WriteLine("Welcome to REGEX User Registration Problem");
-        Start:
+
             Console.WriteLine("Select Options Please :\n" +
-                "1)Enter Sample Emails\n");
+                "1)Enter First Name\n");
 
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -15,18 +16,14 @@
             {
                 case 1:
 
-                    UserRegistration user8 = new UserRegistration();
-                    Console.WriteLine(":::::::::::::::::::::::::::::;::");
-                    user8.ValidSampleEmail();
+                    UserRegistration user = new UserRegistration();
+                    user.ValidFistName();
                     break;
-
-
 
                 default:
                     Console.WriteLine("Choose Proper options");
                     break;
             }
-            goto Start;
         }
     }
 }
